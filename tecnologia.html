@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productos tecnológicos - Laptops, tablets, accesorios y más al mejor precio">
+    <title>Tecnología | Papelería Tony</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="tecnologia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Papelería Tony"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="regreso-clases.html">Regreso a Clases</a></li>
+                <li class="active" onmouseover="mostrarSubmenu(3)" onmouseout="ocultarSubmenu(3)">
+                    <a href="tecnologia.html">Tecnología</a>
+                    <div id="subseccion3" class="submenu">
+                        <a href="#computo">Cómputo</a>
+                        <a href="#tablets">Tablets</a>
+                        <a href="#accesorios">Accesorios</a>
+                        <a href="#ofertas">Ofertas</a>
+                    </div>
+                </li>
+                <li><a href="regalos.html">Regalos</a></li>
+                <li><a href="remates.html">Remates</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            <a href="auth/login.php" id="user-btn"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Buscar productos tecnológicos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner específico para tecnología -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-tecnologia.jpg');">
+        <div class="hero-content">
+            <h1>Tecnología de Vanguardia</h1>
+            <p>Las mejores marcas y los precios más competitivos</p>
+            <a href="#ofertas" class="btn">Ver ofertas especiales</a>
+        </div>
+    </section>
+
+    <!-- Filtros de productos -->
+    <section class="filters-section">
+        <div class="container">
+            <h2>Filtrar por:</h2>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Categoría</h3>
+                    <select id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="perifericos">Periféricos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <select id="price-filter">
+                        <option value="all">Todos los precios</option>
+                        <option value="0-3000">Menos de $3,000</option>
+                        <option value="3000-8000">$3,000 - $8,000</option>
+                        <option value="8000-15000">$8,000 - $15,000</option>
+                        <option value="15000+">Más de $15,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Marca</h3>
+                    <select id="brand-filter">
+                        <option value="all">Todas las marcas</option>
+                        <option value="hp">HP</option>
+                        <option value="lenovo">Lenovo</option>
+                        <option value="dell">Dell</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="btn btn-outline">Restablecer</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de laptops -->
+    <section class="products-section" id="computo">
+        <div class="container">
+            <h2 class="section-title">Computadoras y Laptops</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="laptops" data-price="12999" data-brand="hp">
+                    <img src="img/laptop-hp.jpg" alt="Laptop HP Pavilion">
+                    <div class="product-info">
+                        <h3>Laptop HP Pavilion 15</h3>
+                        <div class="product-price">$12,999.00 <span class="old-price">$14,499.00</span></div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-microchip"></i> Intel Core i5</p>
+                            <p><i class="fas fa-memory"></i> 8GB RAM</p>
+                            <p><i class="fas fa-hdd"></i> 512GB SSD</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(601, 'Laptop HP Pavilion 15', 12999, 'img/laptop-hp.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">-10%</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="laptops" data-price="18999" data-brand="dell">
+                    <img src="img/laptop-dell.jpg" alt="Laptop Dell Inspiron">
+                    <div class="product-info">
+                        <h3>Laptop Dell Inspiron 15</h3>
+                        <div class="product-price">$18,999.00</div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-microchip"></i> Intel Core i7</p>
+                            <p><i class="fas fa-memory"></i> 16GB RAM</p>
+                            <p><i class="fas fa-hdd"></i> 1TB SSD</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(602, 'Laptop Dell Inspiron 15', 18999, 'img/laptop-dell.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Nuevo</div>
+                </div>
+                
+                <!-- Más productos de laptops... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de tablets -->
+    <section class="products-section" id="tablets">
+        <div class="container">
+            <h2 class="section-title">Tablets</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="tablets" data-price="5999" data-brand="samsung">
+                    <img src="img/tablet-samsung.jpg" alt="Tablet Samsung Galaxy Tab A">
+                    <div class="product-info">
+                        <h3>Tablet Samsung Galaxy Tab A8</h3>
+                        <div class="product-price">$5,999.00 <span class="old-price">$6,499.00</span></div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-microchip"></i> Octa-Core 2.0GHz</p>
+                            <p><i class="fas fa-memory"></i> 4GB RAM</p>
+                            <p><i class="fas fa-hdd"></i> 64GB + MicroSD</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(36)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(611, 'Tablet Samsung Galaxy Tab A8', 5999, 'img/tablet-samsung.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">-8%</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="tablets" data-price="8999" data-brand="apple">
+                    <img src="img/ipad.jpg" alt="iPad 10.2">
+                    <div class="product-info">
+                        <h3>iPad 10.2 (9na Gen)</h3>
+                        <div class="product-price">$8,999.00</div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-microchip"></i> Chip A13 Bionic</p>
+                            <p><i class="fas fa-memory"></i> 3GB RAM</p>
+                            <p><i class="fas fa-hdd"></i> 64GB</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(54)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(612, 'iPad 10.2 (9na Gen)', 8999, 'img/ipad.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Más productos de tablets... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de accesorios -->
+    <section class="products-section" id="accesorios">
+        <div class="container">
+            <h2 class="section-title">Accesorios</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="accesorios" data-price="899" data-brand="logitech">
+                    <img src="img/mouse-logitech.jpg" alt="Mouse Logitech M720">
+                    <div class="product-info">
+                        <h3>Mouse Logitech M720 Triathlon</h3>
+                        <div class="product-price">$899.00 <span class="old-price">$1,099.00</span></div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-bluetooth"></i> Bluetooth/Unifying</p>
+                            <p><i class="fas fa-battery-full"></i> Hasta 24 meses de batería</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(67)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(621, 'Mouse Logitech M720 Triathlon', 899, 'img/mouse-logitech.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">-18%</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="accesorios" data-price="1299" data-brand="anker">
+                    <img src="img/cargador-anker.jpg" alt="Cargador Anker 65W">
+                    <div class="product-info">
+                        <h3>Cargador Anker 65W Nano II</h3>
+                        <div class="product-price">$1,299.00</div>
+                        <div class="product-specs">
+                            <p><i class="fas fa-bolt"></i> Carga rápida PD 3.0</p>
+                            <p><i class="fas fa-compress-alt"></i> Ultra compacto</p>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(39)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(622, 'Cargador Anker 65W Nano II', 1299, 'img/cargador-anker.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Más productos de accesorios... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de oferta especial -->
+    <section class="special-offer" id="ofertas">
+        <div class="container">
+            <div class="offer-content">
+                <h2>Oferta Especial: Paquete Tecnológico</h2>
+                <p>Laptop + Tablet + Accesorios con 15% de descuento</p>
+                <div class="offer-price">
+                    <span class="old-price">$28,497.00</span>
+                    <span class="new-price">$24,199.00</span>
+                </div>
+                <button class="btn btn-large" onclick="agregarAlCarrito(630, 'Paquete Tecnológico', 24199, 'img/paquete-tecnologico.jpg')">
+                    Comprar ahora
+                </button>
+            </div>
+            <div class="offer-image">
+                <img src="img/paquete-tecnologico.jpg" alt="Paquete Tecnológico">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de marcas -->
+    <section class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Marcas que nos respaldan</h2>
+            <div class="brands-grid">
+                <img src="img/logo-hp.png" alt="HP">
+                <img src="img/logo-dell.png" alt="Dell">
+                <img src="img/logo-lenovo.png" alt="Lenovo">
+                <img src="img/logo-apple.png" alt="Apple">
+                <img src="img/logo-samsung.png" alt="Samsung">
+                <img src="img/logo-logitech.png" alt="Logitech">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro</p>
+                <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> contacto@papeleria-tony.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+                <p>Domingo: 10:00 - 15:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="regalos.html">Regalos</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir ofertas tecnológicas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Papelería Tony. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tecnologia.js"></script>
+</body>
+</html>

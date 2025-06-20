@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todo lo necesario para el regreso a clases - Cuadernos, mochilas, útiles escolares y paquetes completos">
+    <title>Regreso a Clases | Papelería Tony</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación (consistente con index.html) -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Papelería Tony"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="active" onmouseover="mostrarSubmenu(2)" onmouseout="ocultarSubmenu(2)">
+                    <a href="regreso-clases.html">Regreso a Clases</a>
+                    <div id="subseccion2" class="submenu">
+                        <a href="#cuadernos">Cuadernos</a>
+                        <a href="#utiles">Útiles</a>
+                        <a href="#mochilas">Mochilas</a>
+                        <a href="#paquetes">Paquetes escolares</a>
+                    </div>
+                </li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="regalos.html">Regalos</a></li>
+                <li><a href="remates.html">Remates</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            <a href="auth/login.php" id="user-btn"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner específico para regreso a clases -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-regreso.jpg');">
+        <div class="hero-content">
+            <h1>Regreso a Clases 2024</h1>
+            <p>Todo lo que necesitas para el nuevo ciclo escolar</p>
+            <a href="#paquetes" class="btn">Ver paquetes escolares</a>
+        </div>
+    </section>
+
+    <!-- Filtros de productos -->
+    <section class="filters-section">
+        <div class="container">
+            <h2>Filtrar por:</h2>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Categoría</h3>
+                    <select id="category-filter">
+                        <option value="all">Todas las categorías</option>
+                        <option value="cuadernos">Cuadernos</option>
+                        <option value="utiles">Útiles escolares</option>
+                        <option value="mochilas">Mochilas</option>
+                        <option value="paquetes">Paquetes</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <select id="price-filter">
+                        <option value="all">Todos los precios</option>
+                        <option value="0-100">Menos de $100</option>
+                        <option value="100-300">$100 - $300</option>
+                        <option value="300-500">$300 - $500</option>
+                        <option value="500+">Más de $500</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h3>Marca</h3>
+                    <select id="brand-filter">
+                        <option value="all">Todas las marcas</option>
+                        <option value="scribe">Scribe</option>
+                        <option value="bic">Bic</option>
+                        <option value="pelikan">Pelikan</option>
+                        <option value="faber">Faber-Castell</option>
+                        <option value="otras">Otras marcas</option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="btn btn-outline">Restablecer</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de cuadernos -->
+    <section class="products-section" id="cuadernos">
+        <div class="container">
+            <h2 class="section-title">Cuadernos</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="cuadernos" data-price="85" data-brand="scribe">
+                    <img src="img/cuaderno-profesional.jpg" alt="Cuaderno profesional">
+                    <div class="product-info">
+                        <h3>Cuaderno profesional Scribe</h3>
+                        <div class="product-price">$85.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(101, 'Cuaderno profesional Scribe', 85, 'img/cuaderno-profesional.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Nuevo</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="cuadernos" data-price="65" data-brand="scribe">
+                    <img src="img/cuaderno-rayas.jpg" alt="Cuaderno rayas">
+                    <div class="product-info">
+                        <h3>Cuaderno rayas Scribe</h3>
+                        <div class="product-price">$65.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(95)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(102, 'Cuaderno rayas Scribe', 65, 'img/cuaderno-rayas.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Más productos de cuadernos... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de útiles escolares -->
+    <section class="products-section" id="utiles">
+        <div class="container">
+            <h2 class="section-title">Útiles Escolares</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="utiles" data-price="120" data-brand="bic">
+                    <img src="img/paquete-lapices.jpg" alt="Paquete de lápices">
+                    <div class="product-info">
+                        <h3>Paquete de lápices Bic (12 pz)</h3>
+                        <div class="product-price">$120.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(210)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(201, 'Paquete de lápices Bic (12 pz)', 120, 'img/paquete-lapices.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Más vendido</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="utiles" data-price="95" data-brand="pelikan">
+                    <img src="img/colores-pelikan.jpg" alt="Colores Pelikan">
+                    <div class="product-info">
+                        <h3>Colores Pelikan (12 pz)</h3>
+                        <div class="product-price">$95.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(156)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(202, 'Colores Pelikan (12 pz)', 95, 'img/colores-pelikan.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Más productos de útiles... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de mochilas -->
+    <section class="products-section" id="mochilas">
+        <div class="container">
+            <h2 class="section-title">Mochilas</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card" data-category="mochilas" data-price="599" data-brand="adidas">
+                    <img src="img/mochila-adidas.jpg" alt="Mochila Adidas">
+                    <div class="product-info">
+                        <h3>Mochila Adidas Essentials</h3>
+                        <div class="product-price">$599.00 <span class="old-price">$799.00</span></div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(78)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(301, 'Mochila Adidas Essentials', 599, 'img/mochila-adidas.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">-25%</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card" data-category="mochilas" data-price="450" data-brand="jansport">
+                    <img src="img/mochila-jansport.jpg" alt="Mochila Jansport">
+                    <div class="product-info">
+                        <h3>Mochila Jansport Classic</h3>
+                        <div class="product-price">$450.00</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(142)</span>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(302, 'Mochila Jansport Classic', 450, 'img/mochila-jansport.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Más productos de mochilas... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de paquetes escolares -->
+    <section class="products-section" id="paquetes">
+        <div class="container">
+            <h2 class="section-title">Paquetes Escolares</h2>
+            <div class="packages-tabs">
+                <button class="tab-btn active" data-grade="preescolar">Preescolar</button>
+                <button class="tab-btn" data-grade="primaria">Primaria</button>
+                <button class="tab-btn" data-grade="secundaria">Secundaria</button>
+                <button class="tab-btn" data-grade="preparatoria">Preparatoria</button>
+            </div>
+            
+            <div class="tab-content active" id="preescolar">
+                <div class="products-grid">
+                    <!-- Paquete 1 -->
+                    <div class="product-card package-card">
+                        <img src="img/paquete-preescolar.jpg" alt="Paquete Preescolar Básico">
+                        <div class="product-info">
+                            <h3>Paquete Preescolar Básico</h3>
+                            <div class="product-price">$499.00 <span class="old-price">$650.00</span></div>
+                            <ul class="package-items">
+                                <li>2 Cuadernos de dibujo</li>
+                                <li>12 Lápices de colores</li>
+                                <li>2 Lápices adhesivos</li>
+                                <li>1 Tijeras punta redonda</li>
+                                <li>1 Estuche plástico</li>
+                            </ul>
+                            <button class="add-to-cart" onclick="agregarAlCarrito(401, 'Paquete Preescolar Básico', 499, 'img/paquete-preescolar.jpg')">
+                                <i class="fas fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+                        <div class="product-badge">Ahorra $151</div>
+                    </div>
+                    
+                    <!-- Más paquetes de preescolar... -->
+                </div>
+            </div>
+            
+            <div class="tab-content" id="primaria">
+                <div class="products-grid">
+                    <!-- Paquete 1 -->
+                    <div class="product-card package-card">
+                        <img src="img/paquete-primaria.jpg" alt="Paquete Primaria Básico">
+                        <div class="product-info">
+                            <h3>Paquete Primaria Básico</h3>
+                            <div class="product-price">$799.00 <span class="old-price">$950.00</span></div>
+                            <ul class="package-items">
+                                <li>5 Cuadernos profesionales</li>
+                                <li>12 Lápices de grafito</li>
+                                <li>1 Sacapuntas y borrador</li>
+                                <li>1 Juego de geometría</li>
+                                <li>1 Mochila básica</li>
+                            </ul>
+                            <button class="add-to-cart" onclick="agregarAlCarrito(402, 'Paquete Primaria Básico', 799, 'img/paquete-primaria.jpg')">
+                                <i class="fas fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+                        <div class="product-badge">Ahorra $151</div>
+                    </div>
+                    
+                    <!-- Más paquetes de primaria... -->
+                </div>
+            </div>
+            
+            <!-- Contenido de otras pestañas (secundaria, preparatoria)... -->
+        </div>
+    </section>
+
+    <!-- Banner de oferta especial -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <h2>Oferta Especial: Paquete Completo</h2>
+                <p>Lleva todo lo necesario para el regreso a clases con un 30% de descuento</p>
+                <div class="offer-price">
+                    <span class="old-price">$2,499.00</span>
+                    <span class="new-price">$1,749.00</span>
+                </div>
+                <button class="btn btn-large" onclick="agregarAlCarrito(410, 'Paquete Completo Regreso a Clases', 1749, 'img/paquete-completo.jpg')">
+                    Comprar ahora
+                </button>
+            </div>
+            <div class="offer-image">
+                <img src="img/paquete-completo.jpg" alt="Paquete Completo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (consistente con index.html) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro</p>
+                <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> contacto@papeleria-tony.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+                <p>Domingo: 10:00 - 15:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="regreso-clases.html">Regreso a clases</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir ofertas especiales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Papelería Tony. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="regreso-clases.js"></script>
+</body>
+</html>

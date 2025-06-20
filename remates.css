@@ -1,0 +1,223 @@
+/* Estilos específicos para la página de Remates */
+
+/* Hero específico */
+.page-hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.page-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Contador de ofertas */
+.countdown-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+.countdown-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.countdown-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.countdown-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.countdown-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px 20px;
+    min-width: 80px;
+}
+
+.countdown-item span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+}
+
+.countdown-item small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Sección de remates */
+.remates-section {
+    padding: 60px 0;
+}
+
+/* Descuento en productos */
+.product-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--danger-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Barra de stock */
+.product-stock {
+    margin: 15px 0;
+}
+
+.stock-bar {
+    height: 6px;
+    background-color: #eee;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.stock-level {
+    height: 100%;
+    background-color: var(--success-color);
+    border-radius: 3px;
+}
+
+.product-stock small {
+    font-size: 0.8rem;
+    color: var(--danger-color);
+    font-weight: 500;
+}
+
+/* Ofertas flash */
+.flash-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flash-countdown {
+    background-color: var(--warning-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flash-countdown i {
+    font-size: 1.3rem;
+}
+
+.flash-card .product-badge {
+    background-color: var(--warning-color);
+}
+
+/* Última oportunidad */
+.last-chance-section {
+    padding: 60px 0;
+    background-color: #fff8f8;
+}
+
+.last-chance-section .section-title {
+    color: var(--danger-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.last-chance-card .product-badge {
+    background-color: var(--danger-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .countdown-item {
+        padding: 10px 15px;
+        min-width: 70px;
+    }
+    
+    .countdown-item span {
+        font-size: 2rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-timer {
+        gap: 10px;
+    }
+    
+    .countdown-item {
+        padding: 8px 10px;
+        min-width: 60px;
+    }
+    
+    .countdown-item span {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-item small {
+        font-size: 0.7rem;
+    }
+}

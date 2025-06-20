@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ofertas especiales y remates - Los mejores descuentos en productos de papelería, tecnología y más">
+    <title>Remates y Ofertas | Papelería Tony</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="remates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Papelería Tony"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="regreso-clases.html">Regreso a Clases</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="regalos.html">Regalos</a></li>
+                <li class="active"><a href="remates.html">Remates</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            <a href="auth/login.php" id="user-btn"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Buscar ofertas...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner específico para remates -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-remates.jpg');">
+        <div class="hero-content">
+            <h1>Gran Remate de Temporada</h1>
+            <p>Hasta 70% de descuento en productos seleccionados</p>
+            <a href="#ofertas-flash" class="btn">Ver ofertas flash</a>
+        </div>
+    </section>
+
+    <!-- Contador de ofertas -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-box">
+                <h2>¡Ofertas por tiempo limitado!</h2>
+                <p>Terminan en:</p>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <small>Días</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <small>Minutos</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <small>Segundos</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos en remate -->
+    <section class="remates-section">
+        <div class="container">
+            <h2 class="section-title">Productos en Remate</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="img/remate1.jpg" alt="Paquete de cuadernos">
+                    <div class="product-info">
+                        <h3>Paquete de 5 cuadernos profesionales</h3>
+                        <div class="product-price">$199.00 <span class="old-price">$425.00</span></div>
+                        <div class="product-discount">-53%</div>
+                        <div class="product-stock">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 30%;"></div>
+                            </div>
+                            <small>¡Solo quedan 5 unidades!</small>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(701, 'Paquete de 5 cuadernos profesionales', 199, 'img/remate1.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Remate</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="img/remate2.jpg" alt="Mochila escolar">
+                    <div class="product-info">
+                        <h3>Mochila escolar con ruedas</h3>
+                        <div class="product-price">$499.00 <span class="old-price">$899.00</span></div>
+                        <div class="product-discount">-44%</div>
+                        <div class="product-stock">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 45%;"></div>
+                            </div>
+                            <small>¡Solo quedan 8 unidades!</small>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(702, 'Mochila escolar con ruedas', 499, 'img/remate2.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Oferta</div>
+                </div>
+                
+                <!-- Más productos en remate... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas flash -->
+    <section class="flash-section" id="ofertas-flash">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ofertas Flash</h2>
+                <div class="flash-countdown">
+                    <i class="fas fa-bolt"></i>
+                    <span id="flash-hours">12</span>h 
+                    <span id="flash-minutes">34</span>m 
+                    <span id="flash-seconds">56</span>s
+                </div>
+            </div>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card flash-card">
+                    <img src="img/flash1.jpg" alt="Tablet Lenovo">
+                    <div class="product-info">
+                        <h3>Tablet Lenovo Tab M10</h3>
+                        <div class="product-price">$3,299.00 <span class="old-price">$4,999.00</span></div>
+                        <div class="product-discount">-34%</div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(711, 'Tablet Lenovo Tab M10', 3299, 'img/flash1.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Flash</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card flash-card">
+                    <img src="img/flash2.jpg" alt="Impresora HP">
+                    <div class="product-info">
+                        <h3>Impresora HP Deskjet 3775</h3>
+                        <div class="product-price">$1,199.00 <span class="old-price">$1,899.00</span></div>
+                        <div class="product-discount">-37%</div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(712, 'Impresora HP Deskjet 3775', 1199, 'img/flash2.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Flash</div>
+                </div>
+                
+                <!-- Más ofertas flash... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos agotándose -->
+    <section class="last-chance-section">
+        <div class="container">
+            <h2 class="section-title">¡Última oportunidad!</h2>
+            <p class="section-subtitle">Productos que se están agotando</p>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card last-chance-card">
+                    <img src="img/last1.jpg" alt="Estuche de geometría">
+                    <div class="product-info">
+                        <h3>Estuche de geometría premium</h3>
+                        <div class="product-price">$149.00 <span class="old-price">$299.00</span></div>
+                        <div class="product-discount">-50%</div>
+                        <div class="product-stock">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 15%;"></div>
+                            </div>
+                            <small>¡Solo quedan 2 unidades!</small>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(721, 'Estuche de geometría premium', 149, 'img/last1.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Agotándose</div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card last-chance-card">
+                    <img src="img/last2.jpg" alt="Kit de arte">
+                    <div class="product-info">
+                        <h3>Kit profesional de arte</h3>
+                        <div class="product-price">$399.00 <span class="old-price">$799.00</span></div>
+                        <div class="product-discount">-50%</div>
+                        <div class="product-stock">
+                            <div class="stock-bar">
+                                <div class="stock-level" style="width: 10%;"></div>
+                            </div>
+                            <small>¡Última unidad!</small>
+                        </div>
+                        <button class="add-to-cart" onclick="agregarAlCarrito(722, 'Kit profesional de arte', 399, 'img/last2.jpg')">
+                            <i class="fas fa-cart-plus"></i> Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="product-badge">Agotándose</div>
+                </div>
+                
+                <!-- Más productos agotándose... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro</p>
+                <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> contacto@papeleria-tony.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+                <p>Domingo: 10:00 - 15:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="remates.html">Remates</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir nuestras mejores ofertas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Papelería Tony. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="remates.js"></script>
+</body>
+</html>

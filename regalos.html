@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encuentra el regalo perfecto - Artículos especiales para toda ocasión">
+    <title>Artículos para Regalo | Papelería Tony</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="regalos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Papelería Tony"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="regreso-clases.html">Regreso a Clases</a></li>
+                <li class="active" onmouseover="mostrarSubmenu(3)" onmouseout="ocultarSubmenu(3)">
+                    <a href="regalos.html">Regalos</a>
+                    <div id="subseccion3" class="submenu">
+                        <a href="#ocasiones">Por ocasión</a>
+                        <a href="#precios">Por precio</a>
+                        <a href="#personalizados">Personalizados</a>
+                        <a href="#populares">Más populares</a>
+                    </div>
+                </li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="remates.html">Remates</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            <a href="auth/login.php" id="user-btn"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Buscar regalos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner para regalos -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-regalos.jpg');">
+        <div class="hero-content">
+            <h1>Encuentra el Regalo Perfecto</h1>
+            <p>Para esa persona especial en cualquier ocasión</p>
+            <div class="hero-buttons">
+                <a href="#ocasiones" class="btn">Ver por ocasión</a>
+                <a href="#personalizados" class="btn btn-outline-white">Regalos personalizados</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de ocasiones especiales -->
+    <section class="occasions-section" id="ocasiones">
+        <div class="container">
+            <h2 class="section-title">Regalos por Ocasión</h2>
+            <div class="occasions-grid">
+                <!-- Ocasión 1 -->
+                <a href="#cumpleanos" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-cumpleanos.jpg" alt="Cumpleaños">
+                        <div class="occasion-overlay">
+                            <h3>Cumpleaños</h3>
+                            <p>Celebra su día especial</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Ocasión 2 -->
+                <a href="#aniversario" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-aniversario.jpg" alt="Aniversario">
+                        <div class="occasion-overlay">
+                            <h3>Aniversario</h3>
+                            <p>Celebra su amor</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Ocasión 3 -->
+                <a href="#graduacion" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-graduacion.jpg" alt="Graduación">
+                        <div class="occasion-overlay">
+                            <h3>Graduación</h3>
+                            <p>Premia su esfuerzo</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Ocasión 4 -->
+                <a href="#baby-shower" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-baby.jpg" alt="Baby Shower">
+                        <div class="occasion-overlay">
+                            <h3>Baby Shower</h3>
+                            <p>Para los nuevos padres</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Ocasión 5 -->
+                <a href="#san-valentin" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-valentin.jpg" alt="San Valentín">
+                        <div class="occasion-overlay">
+                            <h3>San Valentín</h3>
+                            <p>Demuestra tu amor</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Ocasión 6 -->
+                <a href="#navidad" class="occasion-card">
+                    <div class="occasion-image">
+                        <img src="img/regalo-navidad.jpg" alt="Navidad">
+                        <div class="occasion-overlay">
+                            <h3>Navidad</h3>
+                            <p>Regalos para toda la familia</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de regalos personalizados -->
+    <section class="personalized-section" id="personalizados">
+        <div class="container">
+            <div class="personalized-content">
+                <h2>Regalos Personalizados</h2>
+                <p>Haz que tu regalo sea único con nuestro servicio de personalización. Agrega nombres, fechas especiales o mensajes personalizados.</p>
+                <ul class="personalized-features">
+                    <li><i class="fas fa-check-circle"></i> Grabado láser en artículos seleccionados</li>
+                    <li><i class="fas fa-check-circle"></i> Impresión de fotos y mensajes</li>
+                    <li><i class="fas fa-check-circle"></i> Combinación de colores a tu elección</li>
+                    <li><i class="fas fa-check-circle"></i> Empaque especial para regalo</li>
+                </ul>
+                <a href="#personalizar" class="btn">Personalizar ahora</a>
+            </div>
+            <div class="personalized-examples">
+                <div class="example-item">
+                    <img src="img/personalizado1.jpg" alt="Taza personalizada">
+                    <p>Taza con foto</p>
+                </div>
+                <div class="example-item">
+                    <img src="img/personalizado2.jpg" alt="Libreta personalizada">
+                    <p>Libreta con nombre</p>
+                </div>
+                <div class="example-item">
+                    <img src="img/personalizado3.jpg" alt="Lapicero personalizado">
+                    <p>Lapicero grabado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de regalos por precio -->
+    <section class="price-section" id="precios">
+        <div class="container">
+            <h2 class="section-title">Encuentra por Precio</h2>
+            <div class="price-tabs">
+                <button class="price-tab active" data-price="0-200">Menos de $200</button>
+                <button class="price-tab" data-price="200-500">$200 - $500</button>
+                <button class="price-tab" data-price="500-1000">$500 - $1,000</button>
+                <button class="price-tab" data-price="1000+">Más de $1,000</button>
+            </div>
+            
+            <div class="price-content active" id="0-200">
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card" data-price="150">
+                        <img src="img/regalo-taza.jpg" alt="Taza decorativa">
+                        <div class="product-info">
+                            <h3>Taza decorativa</h3>
+                            <div class="product-price">$150.00</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(42)</span>
+                            </div>
+                            <button class="add-to-cart" onclick="agregarAlCarrito(501, 'Taza decorativa', 150, 'img/regalo-taza.jpg')">
+                                <i class="fas fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+                        <div class="product-badge">Personalizable</div>
+                    </div>
+                    
+                    <!-- Más productos... -->
+                </div>
+            </div>
+            
+            <!-- Otras pestañas de precios... -->
+        </div>
+    </section>
+
+    <!-- Sección de regalos populares -->
+    <section class="popular-section" id="populares">
+        <div class="container">
+            <h2 class="section-title">Los Regalos Más Populares</h2>
+            <div class="popular-slider">
+                <div class="popular-track">
+                    <!-- Producto 1 -->
+                    <div class="popular-slide">
+                        <div class="product-card">
+                            <img src="img/regalo-popular1.jpg" alt="Kit de escritura">
+                            <div class="product-info">
+                                <h3>Kit de escritura premium</h3>
+                                <div class="product-price">$799.00</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(87)</span>
+                                </div>
+                                <button class="add-to-cart" onclick="agregarAlCarrito(510, 'Kit de escritura premium', 799, 'img/regalo-popular1.jpg')">
+                                    <i class="fas fa-cart-plus"></i> Añadir al carrito
+                                </button>
+                            </div>
+                            <div class="product-badge">Más vendido</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Más productos populares... -->
+                </div>
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicio de regalo -->
+    <section class="gift-service">
+        <div class="container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Servicio de Empaque para Regalo</h3>
+                <p>Haz que tu regalo luzca espectacular con nuestro empaque profesional. Elige entre varios diseños y agrega una tarjeta personalizada.</p>
+                <div class="service-price">Desde $50.00</div>
+                <button class="btn btn-outline">Agregar a mi compra</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Envío Directo al Destinatario</h3>
+                <p>Nosotros nos encargamos de entregar el regalo directamente a la persona especial. Incluye mensaje personalizado.</p>
+                <div class="service-price">$99.00</div>
+                <button class="btn btn-outline">Agregar a mi compra</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Programación de Entrega</h3>
+                <p>Programa la entrega para una fecha específica. Perfecto para cumpleaños y aniversarios.</p>
+                <div class="service-price">$30.00</div>
+                <button class="btn btn-outline">Agregar a mi compra</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro</p>
+                <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> contacto@papeleria-tony.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+                <p>Domingo: 10:00 - 15:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="regalos.html">Regalos</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir ideas de regalos y ofertas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Papelería Tony. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="regalos.js"></script>
+</body>
+</html>

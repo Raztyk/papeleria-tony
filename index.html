@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Papelería Tony - Los mejores productos escolares, de oficina y tecnología a los mejores precios">
+    <title>Papelería Tony - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Papelería Tony"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li onmouseover="mostrarSubmenu(1)" onmouseout="ocultarSubmenu(1)">
+                    <a href="index.html">Inicio</a>
+                    <div id="subseccion1" class="submenu">
+                        <a href="#destacados">Productos destacados</a>
+                        <a href="#nuevos">Nuevos productos</a>
+                        <a href="#ofertas">Ofertas especiales</a>
+                    </div>
+                </li>
+                <li onmouseover="mostrarSubmenu(2)" onmouseout="ocultarSubmenu(2)">
+                    <a href="regreso-clases.html">Regreso a Clases</a>
+                    <div id="subseccion2" class="submenu">
+                        <a href="regreso-clases.html#cuadernos">Cuadernos</a>
+                        <a href="regreso-clases.html#utiles">Útiles</a>
+                        <a href="regreso-clases.html#mochilas">Mochilas</a>
+                        <a href="regreso-clases.html#paquetes">Paquetes escolares</a>
+                    </div>
+                </li>
+                <li onmouseover="mostrarSubmenu(3)" onmouseout="ocultarSubmenu(3)">
+                    <a href="tecnologia.html">Tecnología</a>
+                    <div id="subseccion3" class="submenu">
+                        <a href="tecnologia.html#computo">Cómputo</a>
+                        <a href="tecnologia.html#tablets">Tablets</a>
+                        <a href="tecnologia.html#accesorios">Accesorios</a>
+                    </div>
+                </li>
+                <li><a href="regalos.html">Regalos</a></li>
+                <li><a href="remates.html">Remates</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            <a href="auth/login.php" id="user-btn"><i class="fas fa-user"></i></a>
+            <a href="carrito.html" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Banner (Carrusel) -->
+    <section class="hero" id="inicio">
+        <div class="hero-slide active">
+            <div class="hero-content">
+                <h1>Bienvenido a Papelería Tony</h1>
+                <p>Todo lo que necesitas para el regreso a clases</p>
+                <a href="regreso-clases.html" class="btn">Ver productos</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h1>Gran venta de tecnología</h1>
+                <p>Hasta 40% de descuento en laptops y tablets</p>
+                <a href="tecnologia.html" class="btn">Comprar ahora</a>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-content">
+                <h1>Ofertas especiales</h1>
+                <p>Productos seleccionados con descuentos increíbles</p>
+                <a href="remates.html" class="btn">Ver ofertas</a>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <!-- Sección de categorías destacadas -->
+    <section class="categories-section">
+        <h2 class="section-title">Nuestras Categorías</h2>
+        <div class="categories-grid">
+            <a href="regreso-clases.html" class="category-card">
+                <img src="img/categoria-regreso.jpg" alt="Regreso a clases">
+                <h3>Regreso a clases</h3>
+            </a>
+            <a href="tecnologia.html" class="category-card">
+                <img src="img/categoria-tecnologia.jpg" alt="Tecnología">
+                <h3>Tecnología</h3>
+            </a>
+            <a href="regalos.html" class="category-card">
+                <img src="img/categoria-regalos.jpg" alt="Regalos">
+                <h3>Regalos</h3>
+            </a>
+            <a href="remates.html" class="category-card">
+                <img src="img/categoria-ofertas.jpg" alt="Ofertas">
+                <h3>Ofertas</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Productos destacados -->
+    <section class="featured-section" id="destacados">
+        <h2 class="section-title">Productos Destacados</h2>
+        <div class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="img/producto1.jpg" alt="Paquete escolar básico">
+                <div class="product-info">
+                    <h3>Paquete escolar básico</h3>
+                    <div class="product-price">$299.00 <span class="old-price">$399.00</span></div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(24)</span>
+                    </div>
+                    <button class="add-to-cart" onclick="agregarAlCarrito(1, 'Paquete escolar básico', 299, 'img/producto1.jpg')">
+                        <i class="fas fa-cart-plus"></i> Añadir al carrito
+                    </button>
+                </div>
+                <div class="product-badge">-25%</div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/producto2.jpg" alt="Mochila ergonómica">
+                <div class="product-info">
+                    <h3>Mochila ergonómica</h3>
+                    <div class="product-price">$599.00</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(42)</span>
+                    </div>
+                    <button class="add-to-cart" onclick="agregarAlCarrito(2, 'Mochila ergonómica', 599, 'img/producto2.jpg')">
+                        <i class="fas fa-cart-plus"></i> Añadir al carrito
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Más productos... -->
+        </div>
+    </section>
+
+    <!-- Banner promocional -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h2>Envío gratis en compras mayores a $599</h2>
+            <p>Válido hasta el 31 de agosto o hasta agotar existencias</p>
+            <a href="regreso-clases.html" class="btn btn-white">Comprar ahora</a>
+        </div>
+    </section>
+
+    <!-- Nuevos productos -->
+    <section class="new-products" id="nuevos">
+        <h2 class="section-title">Nuevos Productos</h2>
+        <div class="products-carousel">
+            <div class="carousel-container">
+                <!-- Productos se cargarán dinámicamente con JavaScript -->
+            </div>
+            <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Centro</p>
+                <p><i class="fas fa-phone"></i> 55 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> contacto@papeleria-tony.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+                <p>Sábado: 9:00 - 18:00</p>
+                <p>Domingo: 10:00 - 15:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="regreso-clases.html">Regreso a clases</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir ofertas especiales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Papelería Tony. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
